@@ -60,7 +60,7 @@ header::after{
     height: 40px;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
-    left: 98%;
+    left: 95.5%;
 } 
 .slideMenu_button--checked{
     border: 2px solid #B8FFEC;
