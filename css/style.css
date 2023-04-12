@@ -1,6 +1,7 @@
 body{
-    margin: 0;
+    margin: auto;
     font-family: "TT Lakes";
+    max-width: 1120px;
 }
 a{
     text-decoration: none;
