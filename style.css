@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    font-family: "TT Lakes";
+}
+a{
+    text-decoration: none;
+}
+/* Стили для шапки */
+.upperMenu{
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+}
+.upperMenu_pics--flexbox{
+    box-sizing: border-box;
+    display: flex;
+    gap: 1em;
+}
+header::after{
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #d9fff5;
+}
+/* Стили для main */
+.topic--flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+.hiddenButtons{
+    display: flex;
+    align-items: center;
+    font-weight:600;
+    white-space: nowrap;
+}
+.topic{
+    white-space: nowrap;
+}
+.topic:before{
+    content: "";
+    float: left;
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    border-radius:1em;
+    margin-right: 30px ;
+}
+.slideMenu{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    overflow-x: scroll;
+}
+/* Размытие текста */
+ .slideMenu::after{ 
+    content: "";
+    width: 24px;
+    height: 40px;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    position: absolute;
+    left: 93%;
+} 
+.slideMenu_button--checked{
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+.slideMenu_button{
+    color: gray;
+    margin-left: 16px;
+    padding: 8px;
+    padding-left: 17px;
+    padding-right: 9px;
+    white-space: nowrap;
+}
+.description{
+    margin: 1em;
+    margin-top: 0;
+}
+.description_text--forSmall{
+    max-width: 288px;
+    white-space: wrap;
+}
+.description_text--forMiddle{
+    max-width: 312px;
+    white-space: wrap;
+}
+.description_readMore{
+    display: flex;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 16px;
+    font-weight: 600;
+}
+.readMore_icon{
+    margin-right: 16px;
+}
+.description--flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.logo{
+    border-radius: 0.6em;
+}
+/* Отображение элементов */
+@media (max-width: 663px){
+    .logo{
+        border-radius: 0;
+    }
+}
+@media (max-width: 320px){
+    .description_text--forMiddle,
+    .description_text--forLarge{
+        display: none;
+    }
+}
+@media (max-width: 664px){
+    .pics_elem--hidden{
+        display: none;
+    }
+}
+@media (min-width: 321px) and (max-width: 1119px){
+    .description_text--forLarge,
+    .description_text--forSmall{
+        display: none;
+    }
+}
+@media (max-width: 1119px){
+    .hiddenButtons{
+        display: none;
+    }
+    main{
+        background-color: #F8F8F8;
+    }
+}
+@media (min-width: 1120px){
+    .description_text--forMiddle,
+    .description_text--forSmall{
+        display: none;
+    }
+    .pics_elem--hidden{
+        display: none;
+    }
+    .slideMenu{
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    .description--flexbox{
+        flex-wrap: nowrap;
+    }
+    header{
+        display: none;
+    }
+    .slideMenu:after{
+        display: none;
+    }
+}
+
