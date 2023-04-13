@@ -1,0 +1,249 @@
+body{
+    margin: 0;
+    font-family: "TT Lakes";
+}
+a, button{
+    cursor: pointer;
+}
+a:active, button:active{
+    color: lightskyblue;
+}
+a:hover, button:hover{
+    opacity: 0.5;
+}
+a:focus, button:focus{
+    box-shadow: 0 0 0 3px lightgreen;
+    border-radius: 0.5em;
+}
+/* СТИЛИ ШАПКИ */
+.header{
+    display: flex;
+    align-items: center;
+    padding: 18px 16px;
+}
+.header__logo{
+    margin: 0 16px;
+    border-color: aquamarine;
+    display: flex;
+    align-items: center;
+}
+.header__logo:before{
+    content:"";
+    width: 2px;
+    height: 32px;
+    background-color:#EAEAEA;
+    border-radius: 1px;
+    margin-right: 20px;
+}
+.header__actions{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-left: auto;
+}
+.header__actions:before{
+    content:"";
+    width: 2px;
+    height: 32px;
+    background-color:#EAEAEA;
+    border-radius: 1px;
+    margin-right: 20px;
+}
+.action:not(.action:last-child){
+    margin-right: 16px;
+}
+.action:nth-child(4){
+    display: flex;
+    align-items: center;
+}
+.action:nth-child(4):before{
+    content:"";
+    width: 2px;
+    height: 32px;
+    background-color:#EAEAEA;
+    border-radius: 1px;
+    margin-right: 20px;
+}
+/* Стилизация кнопок шапки */.header__button, .action__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	border: none;
+    Width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/* Стили для main */
+.main__title{
+    display: flex;
+    align-items: center;
+}
+.title__header{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.title__header:before{
+    content: "";
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    border-radius: 1em;
+    margin-right: 12px;
+}
+.main:before{
+    content: "";
+    display: block;
+    height: 1px;
+    background-color:#D9FFF5;
+}
+.main__operations{
+    padding: 0;
+    margin-left: auto;
+    margin-right: 32px;
+    display: flex;
+    list-style-type: none;
+    gap: 32px;
+}
+.operation__button{
+    display: flex;
+    padding: 0;
+    gap: 8px;
+    align-items: center;
+    border: none;
+    background-color: #FFFFFF;
+}
+.navigation__list{
+    margin-left: 16px;
+    padding: 0;
+    font-size: 16px;
+    display: flex; 
+    list-style-type: none; 
+    overflow-x: scroll ;
+}
+.list__elem{
+    padding: 8px 16px;
+    padding-right: 9px;
+}
+.list__elem--chosen{
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+.elem__link{
+    color: gray;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.main__about{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+.about__info{
+    margin-bottom: 16px;
+}
+.info--for-small{
+    max-width: 288px;
+}
+.info--for-middle{
+    max-width: 312px;
+}
+.info--for-large{
+    max-width: 490px;
+}
+.info__read-more{
+    padding-left: 8px;
+    border: none;
+    background-color: #F8F8F8;;
+    font-size: 16px;
+}
+.read-more__icon{
+    margin-right:16px; 
+}
+@media (max-width: 767px){
+   .header__logo:before{
+        display: none;
+    } 
+    .action:nth-child(1),
+    .action:nth-child(2),
+    .action:nth-child(3){
+        display: none;
+    }
+    
+    .action:nth-child(4):before{
+        display: none;
+    }
+    .main{
+        background-color:#F8F8F8; ;
+    }
+    
+    .info--for-middle,
+    .info--for-large{
+        display: none;
+    }
+    .about__info{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1119px){
+    .header__logo{
+        margin-left: 20px;
+    }
+    .header__actions::before{
+        display: none;
+    }
+    .main{
+        background-color:#F8F8F8; ;
+    }
+    .title__header:before{
+        margin-right: 20px;
+    }
+    .info--for-small, 
+    .info--for-large{
+        display: none;
+    }
+    .about__info{
+        margin-left: 24px;
+        margin-right: 48px;
+    }
+    .picture{
+        border-radius: 6px;
+    }
+}
+@media (max-width: 1119px){
+    .main__operations{
+        display: none;
+    }
+}
+@media (min-width: 1120px){
+    .header{
+        display: none;
+    }
+    .title__header:before{
+        margin-right: 30px;
+    }
+    .navigation__list{
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    .info--for-middle,
+    .info--for-small{
+        display: none;
+    }
+    .list__elem{
+    padding: 8px 22px;
+}
+    .about__info{
+        margin-left: 34px;
+        margin-right: 36px;
+    }
+    .info__read-more{
+        background-color: #FFFFFF;
+    }
+    .picture{
+        border-radius: 6px;
+    }
+}
